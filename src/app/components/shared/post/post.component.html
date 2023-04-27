@@ -1,0 +1,29 @@
+<div class="post">
+    <div class="post-top flex flex-spb">
+        <div class="flex">
+            <app-avatar></app-avatar>
+            <div>
+                <div class="h4">{{post.author}}</div>
+                <span>{{post.date.toLocaleDateString('ru-RU')}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="post-image-wrapper">
+        <img [src]="post.img" [alt]="post.name">
+    </div>
+    <h3>{{post.name}}</h3>
+    <div class="flex flex-spb">
+        <div class="flex">
+            <div *ngFor="let _ of [].constructor(post.rating); let i = index">
+                <app-icon icon="filled_star"></app-icon>
+            </div>
+            <div *ngFor="let _ of [].constructor(5 - post.rating); let i = index">
+                <app-icon icon="star"></app-icon>
+            </div>
+        </div>
+        <div class="flex">
+            <div>{{post.comments.length}}</div>
+            <app-icon icon="comment"></app-icon>
+        </div>
+    </div>
+</div>

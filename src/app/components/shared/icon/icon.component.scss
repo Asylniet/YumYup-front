@@ -1,0 +1,10 @@
+.sidebar-item {
+    path {
+        transition: 0.2s ease;
+    }
+    &.active, &:hover {
+        path {
+            stroke: #fff;
+        }
+    }
+}

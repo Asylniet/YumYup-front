@@ -1,0 +1,20 @@
+<div class="index-page-top-text flex-start flex-column g10">
+    <input 
+        name="name"
+        class="h1"
+        [value]="user.name"
+        [(ngModel)]="nameInput"
+        (blur)="onNameBlur()"
+    />
+    <textarea 
+        name="bio" 
+        id="user_bio" 
+        [value]="user.bio"
+        class="h3"
+        [ngClass]="{'filled': user.bio}" 
+        [(ngModel)]="bioInput" 
+        (blur)="onBioBlur()"
+        rows="3"
+        placeholder="Lets finish your setup by adding bio to profile. Other people will see this information. Start typing here">
+    </textarea>
+</div>

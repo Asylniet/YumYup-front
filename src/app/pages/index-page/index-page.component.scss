@@ -1,0 +1,17 @@
+.avatar-wrapper {
+    position: relative;
+    top: -40px;
+}
+
+.top-cover {
+    width: 100%;
+    object-fit: cover;
+    max-height: 8.75rem;
+    border-radius: 5px;
+}
+
+.index-page {
+    &-top {
+        padding: 0;
+    }
+}

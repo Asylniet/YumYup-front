@@ -1,0 +1,33 @@
+.index-page-top-text {
+    input {
+        transition: 0.2s ease;
+        padding: 0.3rem 0;
+        border-color: transparent;
+        &:focus {
+            outline: none;
+            border-bottom-color: #000;
+        }
+    }
+    textarea {
+        transition: 0.2s ease;
+        border-radius: 10px;
+        width: clamp(600px, 100%, 800px);
+        resize: none;
+        border: 1px solid transparent;
+        color: #606369;
+        &:hover {
+            border-color:#eee;
+        }
+        &:focus {
+            padding: 0.5rem;
+            border-color: #000;
+        }
+        &:not(.filled) {
+            border: 1px solid #eee;
+            padding: 0.5rem;
+            &:focus {
+                border-color: #000;
+            }
+        }
+    }
+}

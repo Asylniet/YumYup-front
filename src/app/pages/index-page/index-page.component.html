@@ -1,0 +1,16 @@
+<div class="page">
+    <img [src]="'/assets/covers/' + user.cover_img + '.jpg'" alt="Cover" class="top-cover">
+    <div class="index-page-main">
+        <div class="index-page-top flex-start g20">
+            <div class="avatar-wrapper">
+                <app-avatar width="12.5" fz="5" ></app-avatar>
+            </div>
+            <index-page-form></index-page-form>
+        </div>
+    </div>
+    <div class="flex flex-start g10">
+        <div *ngFor="let post of posts">
+            <app-post [post]="post"></app-post>
+        </div>
+    </div>
+</div>

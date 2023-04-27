@@ -1,0 +1,22 @@
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    border-right: 1px solid #e5e5e5;
+    padding: 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-logo {
+    display: flex;
+    padding-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+app-sidebar-item {
+    display: block;
+    margin-bottom: 0.5rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

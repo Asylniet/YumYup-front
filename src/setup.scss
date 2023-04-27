@@ -1,0 +1,72 @@
+//Utilities
+@mixin flex($jc: center, $ai: center, $wrap: nowrap, $direction: row) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+}
+
+.flex {
+    @include flex();
+}
+
+.flex-start {
+    @include flex(flex-start, flex-start);
+}
+
+.flex-spb {
+    @include flex(space-between);
+}
+
+.flex-spb-ais {
+    @include flex(space-between, flex-start);
+}
+
+.ais {
+    align-items: flex-start;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.wrap-reverse {
+    flex-wrap: wrap-reverse;
+}
+
+.g10 {
+    gap: 0.625rem;
+}
+
+.g20 {
+    gap: 1.25rem;
+}
+
+.g40 {
+    gap: 2.5rem;
+}
+
+.mY10 {
+    margin: 0.625rem 0;
+}
+
+.mY20 {
+    margin: 1.25rem 0;
+}
+
+.mY40 {
+    margin: 2.5rem 0;
+}
+
+.mY60 {
+    margin: 3.75rem 0;
+}
+
+.center {
+    text-align: center;
+}

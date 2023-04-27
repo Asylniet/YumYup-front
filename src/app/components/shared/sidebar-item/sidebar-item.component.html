@@ -1,0 +1,7 @@
+<a [routerLink]="location" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidebar-item">
+    <app-avatar *ngIf="icon === 'avatar'"></app-avatar>
+    <div *ngIf="icon !== 'avatar' && icon">
+        <app-icon [icon]="icon"></app-icon>
+    </div>
+    <span class="transition">{{title}}</span>
+</a>

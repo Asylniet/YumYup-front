@@ -1,0 +1,11 @@
+.post {
+    width: 380px;
+    height: 380px;
+    img {
+        width: 100%;
+        aspect-ratio: 1 / 0.8;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 0.5rem;
+    }
+}

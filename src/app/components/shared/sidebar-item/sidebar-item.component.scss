@@ -1,0 +1,31 @@
+.sidebar-item {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    transition: 0.2s ease;
+    color: #000;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    app-icon {
+        display: block;
+        height: 40px;
+    }
+    svg, path, span {
+        transition: 0.2s ease;
+    }
+    &:hover, &.active {
+        background: #73C9AB;
+        span {
+            color: #fff;
+        }
+        app-icon path {
+            stroke: #fff;
+        }
+    }
+    &.active {
+        background: linear-gradient(90.13deg, #1D976C 0.13%, #93F9B9 99.91%);
+    }
+}
