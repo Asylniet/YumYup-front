@@ -1,0 +1,27 @@
+.flashcard {
+    transition: 0.2s ease;
+    width: 300px;
+    position: fixed;
+    bottom: -100%;
+    left: 50%;
+    transform: translate(-50%);
+    .flex {
+        border-radius: 10px;
+        width: 100%;
+        height: 70px;
+        border: 1px solid #fff;
+        backdrop-filter: blur(10px);
+    }
+    .pending {
+        color: #000;
+        background-color: rgba(235, 235, 235, 0.8);
+    }
+    .success {
+        color: #fff;
+        background-color: rgba(0, 192, 83, 0.9);
+    }
+}
+
+.flashcard.show {
+    bottom: 2rem;
+}

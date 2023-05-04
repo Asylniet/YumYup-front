@@ -14,7 +14,9 @@ body {
 }
 
 main {
-    width: 100%;
+    width: calc(100% - 200px);
+    height: auto;
+    padding: 0.5rem;
 }
 
 .container {
@@ -23,27 +25,87 @@ main {
     margin: 0 auto;
 }
 
-.h1, h1 {
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-.h2, h2 {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.h3, h3 {
-    font-size: 1.25rem;
-    font-weight: medium;
-}
-
-.page {
-    width: 100%;
-    padding: 0.5rem 0.5rem 0 0.5rem;
+a {
+    text-decoration: none;
+    color: #000;
 }
 
 img {
     display: block;
     max-width: 100%;
+}
+
+app-sidebar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    border-right: 1px solid #e5e5e5;
+}
+
+.loader {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: relative;
+    animation: rotate 1s linear infinite;
+    &.dark::before {
+        border-color: #414141;
+    }
+    &::before {
+        content: "";
+        box-sizing: border-box;
+        position: absolute;
+        inset: 0px;
+        border-radius: 50%;
+        border: 3px solid #FFF;
+        animation: prixClipFix 2s linear infinite ;
+    }
+}
+
+  @keyframes rotate {
+    100%   {transform: rotate(360deg)}
+  }
+
+  @keyframes prixClipFix {
+      0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+      25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+      50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+      75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
+      100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
+  }
+
+button[main], .button[main] {
+    display: block;
+    transition: 0.2s ease;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid #fff;
+    background: linear-gradient(90.13deg, #1D976C 0.13%, #93F9B9 99.91%);
+    padding: 0.7rem 1.2rem;
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 500;
+    
+    &:not(:disabled):hover {
+        cursor: pointer;
+        outline: 3px solid #1D976C;
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
+}
+
+.fit-w {
+    width: fit-content;
+}
+
+.posts {
+    padding-bottom: 1rem;
+    flex-wrap: wrap;
+    app-post:nth-child(3n) {
+        flex-basis: 30%;
+    }
 }

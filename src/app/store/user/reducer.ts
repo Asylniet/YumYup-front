@@ -4,7 +4,7 @@ import { update, updateBio, updateName } from './actions';
 import { IUser } from 'src/app/models/user';
 
 export const initialState: IUser = {
-    name: 'Asylniet Zhetpisbaev',
+    name: 'Aalsdkjaskdljaskdj askdlajsdkl',
     login: '',
     bio: 'asfiluhsakfs;afasha',
     cover_img: 1,

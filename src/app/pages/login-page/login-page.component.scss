@@ -1,0 +1,22 @@
+.input {
+    position: relative;
+    width: clamp(200px, 100%, 600px);
+    input, textarea {
+        width: 100%;
+        display: block;
+        border: none;
+        border: 1px solid #eee;
+        border-radius: 10px;
+        transition: 0.2s ease;
+        padding: 0.5rem 0.5rem 0.5rem 0.7rem;
+        margin: 0.5rem 0 1rem;
+        &:hover {
+            border-color: #000;
+        }
+    }
+    textarea {
+        min-height: 6.25rem;
+        max-height: 25rem;
+        resize: vertical;
+    }
+}

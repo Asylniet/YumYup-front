@@ -1,15 +1,17 @@
 import { Component, Input } from '@angular/core';
-import { IPost } from 'src/app/models/post';
+import { Store } from '@ngrx/store';
+import { IPostCard } from 'src/app/models/post';
+import { AppState } from 'src/app/store/app.state';
 
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.scss']
 })
-export class PostComponent {
-  @Input() post: IPost;
+export class PostComponent  {
+  @Input() post: IPostCard;
 
-  constructor() {
-    this.post = {} as IPost;
+  constructor(private store: Store<AppState>) {
+    this.post = {} as IPostCard;
   }
 }

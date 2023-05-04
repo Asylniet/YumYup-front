@@ -1,0 +1,16 @@
+<h2 class="mY20">Enter your login information</h2>
+
+<form [formGroup]="form">
+    <div class="input">
+        <label>Email</label>
+        <input name="email" formControlName="email" placeholder="Email">
+    </div>
+    <div class="input">
+        <label>Password</label>
+        <input name="password" formControlName="password" 
+                type="password" placeholder="Password">
+    </div>
+    <div class="form-buttons">
+        <button main [disabled]="!form.valid">Login</button>
+    </div>
+</form>

@@ -1,0 +1,14 @@
+<div class="flashcard h3" [ngClass]="{'show': show}">
+    <div *ngIf="flashcard.status === 'PENDING'" class="flex g10 pending">
+        <div class="loader dark"></div>
+        <span>
+            {{ 'Saving ' + flashcard.subject }}
+        </span>
+    </div>
+    <div *ngIf="flashcard.status === 'SUCCESS'" class="flex g10 success">
+        <img src="/assets/icons/check.svg" alt="check icon">
+        <span>
+            {{ 'Saved ' + flashcard.subject }}
+        </span>
+    </div>
+</div>

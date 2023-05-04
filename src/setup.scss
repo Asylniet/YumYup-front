@@ -27,6 +27,10 @@
     align-items: flex-start;
 }
 
+.spb {
+    justify-content: space-between;
+}
+
 .flex-column {
     flex-direction: column;
 }
@@ -37,6 +41,10 @@
 
 .wrap-reverse {
     flex-wrap: wrap-reverse;
+}
+
+.g5 {
+    gap: 5px;
 }
 
 .g10 {
@@ -69,4 +77,27 @@
 
 .center {
     text-align: center;
+}
+
+.d-block {
+    display: block;
+}
+
+.h1, h1 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.h2, h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.h3, h3 {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.w-100 {
+    width: 100%;
 }

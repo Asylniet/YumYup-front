@@ -12,11 +12,13 @@ import { AppState } from 'src/app/store/app.state';
 export class AvatarComponent implements OnInit {
   @Input() width: string = '2';
   @Input() fz: string = '1';
+  @Input() name: string = '';
 
   constructor(private store: Store<AppState>) {}
-  name: string = '';
   
   ngOnInit(): void {
-    this.store.select(selectUserName).subscribe(name => this.name = name);
+    if(!this.name) {
+      this.store.select(selectUserName).subscribe(name => this.name = name);
+    }
   }
 }

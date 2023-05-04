@@ -1,0 +1,38 @@
+<form [formGroup]="form" enctype="multipart/form-data" class="post-form flex-start g40">
+    <div class="form-wrapper">
+        <div class="input">
+            <label for="" class="h3">Title</label>
+            <input type="text" placeholder="Enter title" formControlName="title">
+        </div>
+        <div class="input">
+            <label for="" class="h3">Description</label>
+            <textarea type="text" rows="3" formControlName="description"
+                placeholder="Enter the description of the receipt" [maxlength]="maxLength"></textarea>
+            <h4 class="description-count">{{form.value.description?.length!}} / {{maxLength}}</h4>
+        </div>
+        <div class="input">
+            <label for="" class="h3">Upload photos</label>
+            <div class="custom-dropzone" ngx-dropzone [accept]="'image/*'" [expandable]="true"
+                (change)="onSelect($event)">
+                <ngx-dropzone-label>
+                    <div>
+                        <h3>Upload images here</h3>
+                    </div>
+                </ngx-dropzone-label>
+                <ngx-dropzone-image-preview ngProjectAs="ngx-dropzone-preview" *ngFor="let f of files; let i = index"
+                    [file]="f" [removable]="true" (removed)="onRemove(f)">
+                    <ngx-dropzone-label *ngIf="i == 0" class="image-label">
+                        Cover image
+                    </ngx-dropzone-label>
+                </ngx-dropzone-image-preview>
+            </div>
+        </div>
+    </div>
+    <div class="sticky-post">
+        <h3>Preview</h3>
+        <app-post [post]="post"></app-post>
+        <button main class="mY20 fit-w" type="submit" [disabled]="!form.valid || files.length < 1" (click)="onClick()">
+            Publish post
+        </button>
+    </div>
+</form>

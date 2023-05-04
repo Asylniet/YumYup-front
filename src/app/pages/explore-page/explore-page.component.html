@@ -1,0 +1,17 @@
+<h2 class="mY20">Community posts</h2>
+<div class="input-group">
+    <div class="input-group-wrapper">
+        <input type="text" placeholder="Search">
+        <button>
+            <app-icon icon="search"></app-icon>
+        </button>
+    </div>
+</div>
+<div class="posts-wrapper">
+    <div *ngIf="posts.status === 'SUCCESS'" class="flex flex-start g10 posts">
+        <app-post [post]="post" *ngFor="let post of posts.postCards"></app-post>
+    </div>
+    <div *ngIf="posts.status === 'PENDING'" class="flex flex-start g10 posts">
+        <app-post-loader *ngFor="let _ of [].constructor(4); let i = index"></app-post-loader>
+    </div>
+</div>

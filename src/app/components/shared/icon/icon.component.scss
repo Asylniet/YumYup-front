@@ -8,3 +8,31 @@
         }
     }
 }
+
+.product {
+    path, rect {
+        transition: 0.2s ease;
+    }
+    .check {
+        cursor: pointer;
+        .icon:hover {
+            path {
+                stroke: #fff;
+            }
+            rect {
+                fill: #1D976C;
+            }
+        }       
+    }
+    .minus {
+        cursor: pointer;
+        .icon:hover {
+            path {
+                stroke: #fff;
+            }
+            rect {
+                fill: #FF4242;
+            }
+        }       
+    }
+}

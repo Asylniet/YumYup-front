@@ -1,0 +1,37 @@
+.input-group {
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding: 1rem 0;
+    background-color: #fff; 
+    z-index: 2;
+    &-wrapper {
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        align-items: stretch;
+        width: 60%;
+    }
+    input {
+        padding: 0.5rem 3.2rem 0.5rem 0.5rem;
+        background-color: #f9f9f9;
+        font-size: 1.5rem;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        width: 100%;
+    }
+    button {
+        border: none;
+        outline: none;
+        width: 3rem;
+        aspect-ratio: 1 / 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        background: linear-gradient(90deg, #1D976C 0%, #93F9B9 100%);
+        position: absolute;
+        right: 0;
+    }
+}

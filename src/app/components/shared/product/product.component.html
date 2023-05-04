@@ -1,0 +1,16 @@
+<div class="product flex-spb" [ngClass]="{'expired': expired}">
+    <div class="product-info">
+        <div class="flex-start h3 g10">
+            <div class="emoji">{{product.emoji}}</div>
+            <h3>{{product.title}}</h3>
+        </div>
+        <div class="flex g5">
+            <app-icon icon="clock"></app-icon>
+            <div>{{expiratinString}}</div>
+        </div>
+    </div>
+    <div class="flex flex-column spb h-100">
+        <app-icon icon="check_squared" class="check"></app-icon>
+        <app-icon icon="minus_squared" class="minus"></app-icon>
+    </div>
+</div>

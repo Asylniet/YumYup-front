@@ -1,10 +1,16 @@
 import { IComment } from "./comment";
+import { IResult } from "./setup";
 
-export interface IPost {
+export interface IPostCard {
+    id?: number;
     author: string;
-    name: string;
+    title: string;
     date: Date;
     rating: number;
     comments: IComment[];
     img: string;
+}
+
+export interface IPostCardResult extends IResult {
+    postCards: IPostCard[];
 }

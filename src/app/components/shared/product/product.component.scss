@@ -1,0 +1,23 @@
+.product {
+    background-color: #F9F9F9;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+    &.expired {
+        background-color: #f2d3d3;
+    }
+    &-info {
+        padding: 0.7rem;
+        height: 5rem;
+        .h3 {
+            margin-bottom: 0.5rem;
+        }
+    }
+    .h-100 {
+        height: 5rem;
+    }
+    .check:hover {
+        path {
+            fill: #000;
+        }
+    }
+}
